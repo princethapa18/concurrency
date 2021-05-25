@@ -27,8 +27,8 @@ void add_potato()
     //pencil.lock();
     recursive_pencil.lock();
     potato_count++;
-    add_garlic();      // pencil locked twice in a row  . When trying to unlock garlic . It can't as it is waiting for potato to unlock but potato also can't be locked as it is
-                       // waiting for garlic to get unlocked.
+    add_garlic();      // pencil locked twice in a row. When trying to unlock garlic. It can't be unlocked as it is waiting for potato to unlock but potato also can't 
+                       // be unlocked as it is waiting for garlic to get unlocked.
     //pencil.unlock();
     recursive_pencil.unlock();
 }

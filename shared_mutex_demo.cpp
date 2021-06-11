@@ -11,6 +11,9 @@
     It allows shared ownership when only reading a data
     2 or more threads can acquire shared mutex when only reading 
     When writing only 1 thread locks the mutex.
+    
+    shared ownership    ---> readers (multiple threads)
+    exclusive ownership ---> writer  (only 1 thread)
 
 */
 

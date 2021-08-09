@@ -42,16 +42,15 @@ void deadLock(CriticalData& a, CriticalData& b)
     // do something with a and b
 }
 
-// void deadLock1(CriticalData& a, CriticalData& b)
-// {
-//    cout << "Thread: " << this_thread::get_id() << " first mutex" << endl;
-//    this_thread::sleep_for(chrono::milliseconds(1));
-//    cout << "  Thread: " << this_thread::get_id() << " second mutex" <<  endl;
-//    cout << "    Thread: " << this_thread::get_id() << " get both mutex" << endl;
-   
-//    std::scoped_lock(a.mut, b.mut); //c++17
-//    // do something with a and b
-// }
+void deadLock1(CriticalData& a, CriticalData& b)
+{
+   cout << "Thread: " << this_thread::get_id() << " first mutex" << endl;
+   this_thread::sleep_for(chrono::milliseconds(1));
+   cout << "  Thread: " << this_thread::get_id() << " second mutex" <<  endl;
+   cout << "    Thread: " << this_thread::get_id() << " get both mutex" << endl;
+   std::scoped_lock(a.mut, b.mut); //c++17 // need gcc 7.3.1
+  // do something with a and b
+}
 
 int main()
 {

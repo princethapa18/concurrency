@@ -8,7 +8,7 @@
    -> acquires mutex in constructor
    -> releases mutex in destructor
    
-   -> use lock_gaurd instead of calling lock and unlock.
+   -> use lock_guard instead of calling lock and unlock.
 */
 
 #include <thread>

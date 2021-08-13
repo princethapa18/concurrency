@@ -9,6 +9,14 @@
    -> releases mutex in destructor
    
    -> use lock_guard instead of calling lock and unlock.
+   
+   
+   Member Types     Description
+   mutex_type     ---> underlying mutex type 
+
+   Construction, Destruction and Assignment
+   constructor --> construct lock guard
+   destructor  --> destroy lock guard
 */
 
 #include <thread>

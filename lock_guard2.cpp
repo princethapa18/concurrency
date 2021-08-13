@@ -1,5 +1,14 @@
 /* Week 33 13 Aug 2021 Friday 
-
+   std::lock_guard is RAII class for mutexes
+   template <class T> class lock_guard;
+   -> T specifies type of mutex (Ex. std::mutex, std::recursive_mutex)
+   -> Avoids problem of inadvertently forgetting to release mutex (Ex. due to exception or forgetting unlock call)
+   -> constructor takes mutex as argument
+   -> not movable and not copyable
+   -> acquires mutex in constructor
+   -> releases mutex in destructor
+   
+   -> use lock_gaurd instead of calling lock and unlock.
 */
 
 #include <thread>
